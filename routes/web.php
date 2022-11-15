@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IngredientController;
+use App\Http\Controllers\PotionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::get('/', [IngredientController::class, "index"]) -> name('index');
+
+Route::post('submitIngredients', [PotionController::class, 'calcPhValue']);
