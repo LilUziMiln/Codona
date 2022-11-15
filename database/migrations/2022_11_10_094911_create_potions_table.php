@@ -15,7 +15,11 @@ return new class extends Migration
     {
         Schema::create('potions', function (Blueprint $table) {
             $table->id();
-            //TODO: ADD PROPERTIES
+            $table->string('name');
+            $table->integer('ph_min');
+            $table->integer('ph_max');
+            $table->string('integrity');
+            $table->string('image_photo');
             $table->timestamps();
         });
     }
